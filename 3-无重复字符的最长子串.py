@@ -64,7 +64,6 @@ class Solution:
 # 一个可行的想法, 但超出了运行时间限制...
 
 
-
 ### Copilot ####
 ### 思路: 调试完直接感叹, 又简单又还算高效的方法, 怎么就没想到呢...
 # 定义两个指针 start, end, 分别表示子串的起始和结束位置, 从s的第一个字符开始, 分别向后移动指针, 直到找到不重复的字串
@@ -91,3 +90,44 @@ class Solution1:
 if __name__ == '__main__':
     s = "abcdefba"
     print(Solution1().lengthOfLongestSubstring(s))
+# 奇：
+# 偶：
+# 奇：
+# 偶：ab
+# 奇：abc
+# 偶：  bc
+# 奇：  bcd
+# 偶：    cd
+# 奇：    cdc
+# 奇：  bcdcb
+# 奇：abcdcba
+# 奇：
+# 偶：abcdcbaz
+# 奇：abcdcbazz
+# 偶：  bcdcbazz
+# 奇：  bcdcbazzz
+# 偶：    cdcbazzz
+# 奇：    cdcbazzza
+# 偶：      dcbazzza
+# 奇：      dcbazzzab
+# 偶：        cbazzzab
+# 奇：        cbazzzabc 
+# 奇：      dcbazzzabcd
+# 奇：    cdcbazzzabcde
+# 偶：      dcbazzzabcde
+# 奇：      dcbazzzabcdef
+# 偶：        cbazzzabcdef
+# 奇：        cbazzzabcdefg
+# 偶：          bazzzabcdefg
+# 奇：          bazzzabcdefgf
+# 偶：            azzzabcdefgf
+# 奇：            azzzabcdefgfe
+# 偶：             zzzabcdefgfe
+# 奇：             zzzabcdefgfed
+# 偶：               zzabcdefgfed
+# 奇：               zzabcdefgfedc
+# 偶：                zabcdefgfedc
+# 奇：                zabcdefgfedcb
+# 偶：                abcdefgfedcb
+# 奇：                abcdefgfedcba
+#  abcdefgfedcba
