@@ -18,62 +18,98 @@
 # 一个可行的想法, 但超出了运行时间限制...
 
 
-### 进阶 ###
+### Copilot ###
 # 思路: 
-# class Solution:
-#     def longestPalindrome(self, s: str) -> str:
-#         if len(s) == 0: return ''
-#         if len(s) == 1: return s
-#         start = 0; end = 0
-#         for i in range(len(s)):
-#             s_part = s[i: len(s)]
-            
-            
-            
-            
-        
-        
-### 结果 ### 
-# 一个可行的想法, 但超出了运行时间限制...
-
-
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-        if len(s) == 0: return ""
+        if len(s) == 0: return ''
         if len(s) == 1: return s
-        start = 0 # 起始的索引
-        max_len = 1 # 最长的回文子串的长度, 当s大于1时, 初始值为1
+        start, max_len = 0, 1
         for i in range(len(s)):
             
-            # 奇数回文
-            odd_fragment = s[i - max_len - 1:i + 1]
-            print('奇：' + odd_fragment)
+            # 奇数回文向前取一个字符
+            odd_part = s[i-max_len-1: i+1]
             
-            if i - max_len >= 1 and odd_fragment == odd_fragment[::-1]:
-                start = i - max_len - 1
+            if i-max_len >= 1 and odd_part == odd_part[::-1]:
+                start = i-max_len-1
                 max_len += 2
                 continue
-                
-            # 偶数回文
-            even_fragment = s[i - max_len:i + 1]
-            print('偶：' + even_fragment)
             
-            if i - max_len >= 0 and even_fragment == even_fragment[::-1]:
-                start = i - max_len
+            even_part = s[i-max_len: i+1]
+            if i-max_len >= 0 and even_part == even_part[::-1]:
+                start = i-max_len
                 max_len += 1
                 
         return s[start:start + max_len]
-
-
+### 结果 ### 
+# 执行用时: 120 ms, 在所有 Python3 提交中击败了 98.80% 的用户
+# 内存消耗: 15 MB, 在所有 Python3 提交中击败了 98.70% 的用户
+            
 
 if __name__ == "__main__":
-    
-    # 输入：s = "babad"
-    # 输出："bab"
-    # 解释："aba" 同样是符合题意的答案。
-    
-    # 输入：s = "cbbd"
-    # 输出："bb"
-    
     s = "abcdcbazzzabcdefgfedcba"
     print(Solution().longestPalindrome(s))
+    
+# 奇：
+# 偶：
+# 奇：
+# 偶：cb
+# 奇：cbb
+# 偶：bb
+# 奇：cbbd
+# 偶：bbd
+# bb
+
+# 奇：
+# 偶：   
+# 奇：     
+# 偶：ba   
+# 奇：bab  
+# 奇：     
+# 偶：baba 
+# 奇：babad
+# 偶：abad 
+# bab  
+
+
+# 奇：
+# 偶：
+# 奇：
+# 偶：ab
+# 奇：abc
+# 偶：  bc
+# 奇：  bcd
+# 偶：    cd
+# 奇：    cdc
+# 奇：   bcdcb
+# 奇：abcdcba
+# 奇：
+# 偶：abcdcbaz
+# 奇：abcdcbazz
+# 偶：  bcdcbazz
+# 奇：  bcdcbazzz
+# 偶：    cdcbazzz
+# 奇：    cdcbazzza
+# 偶：      dcbazzza
+# 奇：      dcbazzzab
+# 偶：        cbazzzab
+# 奇：        cbazzzabc 
+# 奇：      dcbazzzabcd
+# 奇：    cdcbazzzabcde
+# 偶：      dcbazzzabcde
+# 奇：      dcbazzzabcdef
+# 偶：        cbazzzabcdef
+# 奇：        cbazzzabcdefg
+# 偶：          bazzzabcdefg
+# 奇：          bazzzabcdefgf
+# 偶：            azzzabcdefgf
+# 奇：            azzzabcdefgfe
+# 偶：             zzzabcdefgfe
+# 奇：             zzzabcdefgfed
+# 偶：               zzabcdefgfed
+# 奇：               zzabcdefgfedc
+# 偶：                zabcdefgfedc
+# 奇：                zabcdefgfedcb
+# 偶：                abcdefgfedcb
+# 奇：                abcdefgfedcba
+#  abcdefgfedcba
