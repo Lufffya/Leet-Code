@@ -30,6 +30,7 @@ class Solution:
 
 
 ### 大神贴图 ###
+# 思路: 
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
         if numRows == 1: return s
