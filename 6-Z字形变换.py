@@ -35,7 +35,6 @@ class Solution:
     def convert(self, s: str, numRows: int) -> str:
         if numRows == 1: return s
         res, n = [''] * numRows, 2 * numRows - 2
-
         for i, c in enumerate(s):
             res[min(idx := i % n, n - idx)] += c
         

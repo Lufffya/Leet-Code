@@ -20,6 +20,20 @@ class Solution:
 # 内存消耗: 14.9 MB, 在所有 Python3 提交中击败了 86.17% 的用户
 
 
+### 进阶 ###
+# 思路: 列出每个位数上的罗马字母, 将对应的数字直接取模然后整除, 就可以在对应的列表中找到对应的罗马字母
+class Solution:
+    def intToRoman(self, num: int) -> str:
+        THOUSANDS = ["", "M", "MM", "MMM"]
+        HUNDREDS = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
+        TENS = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
+        ONES = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
+        return THOUSANDS[num // 1000] + HUNDREDS[num % 1000 // 100] + TENS[num % 100 // 10] + ONES[num % 10]
+### 结果 ### 
+# 执行用时: 40 ms, 在所有 Python3 提交中击败了 95.29% 的用户
+# 内存消耗: 14.9 MB, 在所有 Python3 提交中击败了 82.45% 的用户
+
+
 ### Copilot ###
 # 思路: 排序还是自己加上去的。。。
 class Solution:
@@ -35,6 +49,7 @@ class Solution:
 ### 结果 ### 
 # 执行用时: 60 ms, 在所有 Python3 提交中击败了 19.57% 的用户
 # 内存消耗: 14.9 MB, 在所有 Python3 提交中击败了 86.17% 的用户
+
 
 if __name__ == "__main__":
     num = 9

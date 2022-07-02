@@ -67,7 +67,7 @@ class Solution:
 ### Copilot ####
 ### 思路: 调试完直接感叹, 又简单又还算高效的方法, 怎么就没想到呢...
 # 定义两个指针 start, end, 分别表示子串的起始和结束位置, 从s的第一个字符开始, 分别向后移动指针, 直到找到不重复的字串
-class Solution1:
+class Solution:
     # Find the length of the longest substring in the string s that does not contain duplicate characters
     def lengthOfLongestSubstring(self, s: str) -> int:
         if not s:
@@ -89,4 +89,4 @@ class Solution1:
 
 if __name__ == '__main__':
     s = "abcdefba"
-    print(Solution1().lengthOfLongestSubstring(s))
+    print(Solution().lengthOfLongestSubstring(s))
