@@ -24,9 +24,6 @@ class Solution:
             rows[i].append(_s)
            
         return ''.join(sum(rows, []))
-### 结果 ### 
-# 执行用时: 68 ms, 在所有 Python3 提交中击败了 40.80% 的用户
-# 内存消耗: 15.1 MB, 在所有 Python3 提交中击败了 63.70% 的用户
 
 
 ### 大神贴图 ###

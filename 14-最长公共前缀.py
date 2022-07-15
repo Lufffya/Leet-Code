@@ -16,9 +16,6 @@ class Solution:
                 if strs[j][i] != min_char[i]:
                     return min_char[:i]
         return min_char
-### 结果 ### 
-# 执行用时: 36 ms, 在所有 Python3 提交中击败了 80.14% 的用户
-# 内存消耗: 15.1 MB, 在所有 Python3 提交中击败了 30.08% 的用户
 
 
 ### Copilot ###
@@ -32,9 +29,6 @@ class Solution:
             while strs[i].find(res) != 0:
                 res = res[:-1]
         return res
-### 结果 ### 
-# 执行用时: 32 ms, 在所有 Python3 提交中击败了 93.41% 的用户
-# 内存消耗: 14.9 MB, 在所有 Python3 提交中击败了 99.41% 的用户
 
 
 if __name__ == "__main__":

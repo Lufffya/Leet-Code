@@ -3,6 +3,7 @@
 
 ### 初步设想 ###
 # 思路: 已经捋不清楚了
+# 没写出来, 差最后几个没调试好, 但是一开始的思路就是错的, 直接被github copilot 降维打击
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
         if '.' not in p and '*' not in p:
@@ -102,8 +103,6 @@ class Solution:
                     else: return False
         if s != '': return False
         return True
-### 结果 ### 
-# 没写出来, 差最后几个没调试好, 但是一开始的思路就是错的, 直接被github copilot 降维打击
 
 
 ### Copilot ###

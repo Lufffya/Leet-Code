@@ -15,9 +15,6 @@ class Solution:
                     roman += characters[i]
                     break
         return roman
-### 结果 ### 
-# 执行用时: 60 ms, 在所有 Python3 提交中击败了 19.57% 的用户
-# 内存消耗: 14.9 MB, 在所有 Python3 提交中击败了 86.17% 的用户
 
 
 ### 进阶 ###
@@ -29,9 +26,6 @@ class Solution:
         TENS = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
         ONES = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
         return THOUSANDS[num // 1000] + HUNDREDS[num % 1000 // 100] + TENS[num % 100 // 10] + ONES[num % 10]
-### 结果 ### 
-# 执行用时: 40 ms, 在所有 Python3 提交中击败了 95.29% 的用户
-# 内存消耗: 14.9 MB, 在所有 Python3 提交中击败了 82.45% 的用户
 
 
 ### Copilot ###
@@ -46,9 +40,6 @@ class Solution:
                 res += v
                 num -= k
         return res
-### 结果 ### 
-# 执行用时: 60 ms, 在所有 Python3 提交中击败了 19.57% 的用户
-# 内存消耗: 14.9 MB, 在所有 Python3 提交中击败了 86.17% 的用户
 
 
 if __name__ == "__main__":

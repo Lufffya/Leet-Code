@@ -3,6 +3,7 @@
 
 ### 初步设想 ###
 # 思路: 创建两个指针, 遍历查找所有的回文字符串, 取最长
+# 一个可行的想法, 但超出了运行时间限制...
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         if len(s) == 0: return ''
@@ -14,8 +15,6 @@ class Solution:
                 if s_part == s_part[::-1]:
                     p_max = max(p_max, s_part, key=len)
         return p_max
-### 结果 ### 
-# 一个可行的想法, 但超出了运行时间限制...
 
 
 ### Copilot ###
@@ -42,9 +41,6 @@ class Solution:
                 max_len += 1
                 
         return s[start: start+max_len]
-### 结果 ### 
-# 执行用时: 120 ms, 在所有 Python3 提交中击败了 98.80% 的用户
-# 内存消耗: 15 MB, 在所有 Python3 提交中击败了 98.70% 的用户
             
 
 if __name__ == "__main__":

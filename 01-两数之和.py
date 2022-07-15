@@ -12,9 +12,6 @@ class Solution:
                 if i == j : continue
                 if (nums[i] + nums[j]) == target:
                     return [i, j]
-### 结果 ### 
-# 执行用时: 7780 ms, 在所有 Python3 提交中击败了 5.00% 的用户
-# 内存消耗: 15.5 MB, 在所有 Python3 提交中击败了 91.52% 的用户
 
 
 ### Copilot ###
@@ -27,9 +24,6 @@ class Solution:
                 return [d[target - nums[i]], i]
             d[nums[i]] = i
         return []
-### 结果 ### 
-# 执行用时: 40 ms, 在所有 Python3 提交中击败了 77.42% 的用户
-# 内存消耗: 16.1 MB, 在所有 Python3 提交中击败了 29.56% 的用户
 
 
 if __name__ == '__main__':

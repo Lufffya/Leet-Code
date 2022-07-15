@@ -15,9 +15,6 @@ class Solution:
                     s = s[len(characters[i]):]
                     break
         return _int
-### 结果 ### 
-# 执行用时: 68 ms, 在所有 Python3 提交中击败了 6.62% 的用户
-# 内存消耗: 15 MB, 在所有 Python3 提交中击败了 47.49% 的用户
 
 
 ### Copilot ###
@@ -34,9 +31,6 @@ class Solution:
             else:
                 res += roman_dict[s[i]]
         return res
-### 结果 ### 
-# 执行用时: 36 ms, 在所有 Python3 提交中击败了 99.16% 的用户
-# 内存消耗: 15 MB, 在所有 Python3 提交中击败了 39.95% 的用户
 
 
 if __name__ == "__main__":

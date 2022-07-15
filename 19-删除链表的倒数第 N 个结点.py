@@ -24,9 +24,6 @@ class Solution:
             cur.next = ListNode(head_nums[i])
             cur = cur.next
         return re_head.next
-### 结果 ### 
-# 执行用时: 40 ms, 在所有 Python3 提交中击败了 54.88% 的用户
-# 内存消耗: 14.9 MB, 在所有 Python3 提交中击败了 40.10% 的用户
 
 
 if __name__ == "__main__":

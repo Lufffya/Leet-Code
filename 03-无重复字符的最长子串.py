@@ -5,6 +5,7 @@
 # 思路: 依次记录每一个字符, 
 # 如果字符不重复, 则叠加; 如果字符重复, 则设置为不记录;
 # 最后得到 s 中所有的不重复的子字符串, 返回最长即可
+# 一个可行的想法, 但超出了运行时间限制...
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         if len(s) == 0: return 0
@@ -19,8 +20,6 @@ class Solution:
                     s_dict[j][1] = True
             s_dict.append([s[i], False])
         return max([len(i[0]) for i in s_dict])
-### 结果 ### 
-# 一个可行的想法, 但超出了运行时间限制...
 
 
 ### 进阶 ###
@@ -43,13 +42,11 @@ class Solution:
             # 将当前字符的位置存入字典
             s_dict[s[i]] = i + 1
         return max_len
-### 结果 ### 
-# 执行用时: 64 ms, 在所有 Python3 提交中击败了 75.44% 的用户
-# 内存消耗: 15.1 MB, 在所有 Python3 提交中击败了 45.46% 的用户
 
 
 ### Copilot ####
-### 思路: Copilot 暴力解法, 遍历所有的字串组合情况, set去重判断是否相等
+# 思路: Copilot 暴力解法, 遍历所有的字串组合情况, set去重判断是否相等
+# 一个可行的想法, 但超出了运行时间限制...
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         if not s:
@@ -60,8 +57,6 @@ class Solution:
                 if len(set(s[i:j])) == j-i:
                     max_len = max(max_len, j-i)
         return max_len
-### 结果 ### 
-# 一个可行的想法, 但超出了运行时间限制...
 
 
 ### Copilot ####
@@ -82,9 +77,6 @@ class Solution:
                 start += 1
             max_len = max(max_len, end - start)
         return max_len
-### 结果 ### 
-# 执行用时: 80 ms, 在所有 Python3 提交中击败了 38.79% 的用户
-# 内存消耗: 15.2 MB, 在所有 Python3 提交中击败了 13.81% 的用户
 
 
 if __name__ == '__main__':

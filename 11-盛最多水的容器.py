@@ -4,7 +4,8 @@ from typing import List
 
 
 ### 初步设想 ####
-### 创建双指针遍历所有组合可能, 暴力破解
+# 思路: 创建双指针遍历所有组合可能, 暴力破解
+# 一个可行的想法, 但超出了运行时间限制...
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         max_area = 0
@@ -12,8 +13,6 @@ class Solution:
             for j in range(len(height)): 
                 max_area = max(max_area, abs(i - j) * min(height[i], height[j]))
         return max_area
-### 结果 ### 
-# 一个可行的想法, 但超出了运行时间限制...
 
 
 ### 进阶 ###
@@ -29,9 +28,6 @@ class Solution:
             else:
                 right -= 1
         return max_area
-### 结果 ### 
-# 执行用时: 232 ms, 在所有 Python3 提交中击败了 36.12% 的用户
-# 内存消耗: 24.1 MB, 在所有 Python3 提交中击败了 97.35% 的用户
 
 
 if __name__ == "__main__":

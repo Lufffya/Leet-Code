@@ -35,9 +35,6 @@ class Solution:
                     ans.append([nums[first], nums[second], nums[third]])
         
         return ans
-### 结果 ### 
-# 执行用时: 636 ms, 在所有 Python3 提交中击败了 73.19% 的用户
-# 内存消耗: 17.8 MB, 在所有 Python3 提交中击败了 89.40% 的用户
 
 
 ### Copilot ###
@@ -70,9 +67,6 @@ class Solution:
                     l += 1
                     r -= 1
         return res
-### 结果 ### 
-# 执行用时: 588 ms, 在所有 Python3 提交中击败了 79.75% 的用户
-# 内存消耗: 17.7 MB, 在所有 Python3 提交中击败了 96.01% 的用户
 
 
 if __name__ == "__main__":

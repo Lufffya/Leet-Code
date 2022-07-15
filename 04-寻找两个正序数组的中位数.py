@@ -13,9 +13,6 @@ class Solution:
             return float((nums1[len(nums1) // 2] + nums1[len(nums1) // 2 - 1]) / 2)
         else:
             return float(nums1[len(nums1) // 2])
-### 结果 ### 
-# 执行用时: 36 ms, 在所有 Python3 提交中击败了 98.09% 的用户
-# 内存消耗: 15.2 MB, 在所有 Python3 提交中击败了 19.33% 的用户
 
 
 if __name__ == "__main__":

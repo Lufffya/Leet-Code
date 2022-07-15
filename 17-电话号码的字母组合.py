@@ -21,9 +21,6 @@ class Solution:
                     tmp.append(res[j] + k)
             res = tmp      
         return res
-### 结果 ### 
-# 执行用时: 32 ms, 在所有 Python3 提交中击败了 89.07% 的用户
-# 内存消耗: 15 MB, 在所有 Python3 提交中击败了 81.06% 的用户
 
 
 ### Copilot ###
@@ -37,9 +34,6 @@ class Solution:
         for i in digits:
             res = [x + y for x in res for y in d[i]]
         return res
-### 结果 ### 
-# 执行用时: 40 ms, 在所有 Python3 提交中击败了 39.28% 的用户
-# 内存消耗: 15 MB, 在所有 Python3 提交中击败了 70.82% 的用户
 
 
 if __name__ == "__main__":

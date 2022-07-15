@@ -37,9 +37,6 @@ class Solution:
                         while l < r and nums[r] == nums[r + 1]:
                             r -= 1
         return res
-### 结果 ### 
-# 执行用时: 1118 ms, 在所有 Python3 提交中击败了 22.49% 的用户
-# 内存消耗: 15 MB, 在所有 Python3 提交中击败了 47.46% 的用户
 
 
 ### Copilot ###
@@ -72,9 +69,6 @@ class Solution:
                     else:
                         right -= 1
         return res
-### 结果 ### 
-# 执行用时: 808 ms, 在所有 Python3 提交中击败了 51.67% 的用户
-# 内存消耗: 14.8 MB, 在所有 Python3 提交中击败了 97.62% 的用户
 
 
 if __name__ == "__main__":

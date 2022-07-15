@@ -1,6 +1,5 @@
 # https://leetcode-cn.com/problems/add-two-numbers/
 
-
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -32,13 +31,10 @@ class Solution:
             return node
          
         return recursion(ListNode(), re_num) 
-### 结果 ### 
-# 执行用时: 72 ms, 在所有 Python3 提交中击败了 18.15% 的用户
-# 内存消耗: 15 MB, 在所有 Python3 提交中击败了 43.29% 的用户
 
 
 ### Copilot ####
-### 思路: 同时循环 l1 和 l2, 对位相加, 将和取模余数作为当前节点的值, 将和整除的结果(carry)作为下一节点的值, 然后将游标指向下一节点
+# 思路: 同时循环 l1 和 l2, 对位相加, 将和取模余数作为当前节点的值, 将和整除的结果(carry)作为下一节点的值, 然后将游标指向下一节点
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         # 初始化
@@ -55,9 +51,6 @@ class Solution:
             l1 = l1.next if l1 else None
             l2 = l2.next if l2 else None
         return head.next
-### 结果 ### 
-# 执行用时: 64 ms, 在所有 Python3 提交中击败了 51.36% 的用户
-# 内存消耗: 15 MB, 在所有 Python3 提交中击败了 61.14% 的用户
 
 
 if __name__ == '__main__':
