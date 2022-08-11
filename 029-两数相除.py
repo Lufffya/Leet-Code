@@ -1,8 +1,8 @@
 # https://leetcode.cn/problems/divide-two-integers/
 
 
-### 初步设想 ###
-# 思路: 
+### 官方解题 ###
+# 思路: 二分法
 class Solution:
     # 快速乘
     def quickAdd(self, y: int, z: int, x: int) -> bool:
@@ -66,7 +66,6 @@ class Solution:
                 right = mid - 1
 
         return -ans if rev else ans
-
 
 
 if __name__ == "__main__":
