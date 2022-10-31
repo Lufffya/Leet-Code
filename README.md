@@ -1,1 +1,1 @@
-# Life Is Fucking Movie
+# Life is fucking movie
