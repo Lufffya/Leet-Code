@@ -3,6 +3,7 @@
 from typing import List
 import math
 
+
 class Solution:
     def generateMatrix(self, n: int) -> List[List[int]]:
         matrix = [[0 for i in range(n)] for j in range(n)]
@@ -52,7 +53,6 @@ class Solution:
                 nums_i += 1
             left_col_i += 1
             left_col_j += 1
-
 
 
 if __name__ == "__main__":

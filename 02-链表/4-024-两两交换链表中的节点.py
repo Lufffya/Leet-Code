@@ -13,11 +13,17 @@ class Solution:
         head = ListNode(next=head)
         cur = head
         while cur.next and cur.next.next:
-            pass
+            temp = cur.next
+            temp2 = cur.next.next.next
 
+            cur.next = cur.next.next
+            cur.next.next = temp
 
+            cur.next.next.next = temp2
+            cur = temp
 
         return head.next
+
 
 if __name__ == "__main__":
     head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))

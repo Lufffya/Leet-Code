@@ -1,6 +1,5 @@
 # https://leetcode.cn/problems/minimum-size-subarray-sum/
 
-
 from typing import List
 
 
