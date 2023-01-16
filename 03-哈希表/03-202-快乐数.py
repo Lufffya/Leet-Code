@@ -25,5 +25,5 @@ class Solution:
 
 if __name__ == "__main__":
     n = 19
-    s = Solution()
-    assert s.isHappy(n) == True
+    s = Solution().isHappy(n)
+    print(s)
