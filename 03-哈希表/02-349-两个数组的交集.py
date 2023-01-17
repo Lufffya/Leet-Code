@@ -21,6 +21,5 @@ class Solution:
 if __name__ == "__main__":
     nums1 = [1,2,2,1]
     nums2 = [2,2]
-    s = Solution().intersection(nums1, nums2)
-    print(s)
+    print(Solution().intersection(nums1, nums2))
 

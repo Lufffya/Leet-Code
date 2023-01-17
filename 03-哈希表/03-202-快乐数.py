@@ -25,5 +25,4 @@ class Solution:
 
 if __name__ == "__main__":
     n = 19
-    s = Solution().isHappy(n)
-    print(s)
+    print(Solution().isHappy(n))
