@@ -20,7 +20,8 @@ def list_to_tree(nums):
                 node.left = TreeNode(nums[i])
                 queue.append(node.left)
             i += 1
-
+            
+        if i < len(nums):
             if nums[i]:
                 node.right = TreeNode(nums[i])
                 queue.append(node.right)
