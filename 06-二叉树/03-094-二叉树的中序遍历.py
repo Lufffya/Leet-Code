@@ -4,6 +4,7 @@ from typing import List, Optional
 from helper import TreeNode, list_to_tree
 
 
+# 递归法
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         
@@ -19,6 +20,29 @@ class Solution:
         return nums
 
 
+# 迭代法
+class Solution:
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        if not root:
+            return []
+
+        res = []
+        cur = root
+        stack = []
+
+        while cur or stack:
+            if cur:
+                stack.append(cur)
+                cur = cur.left
+
+            else:
+                cur = stack.pop()
+                res.append(cur.val)
+                cur = cur.right
+                
+        return res
+
+
 if __name__ == "__main__":
-    root = list_to_tree([1,None,2,3])
+    root = list_to_tree([5,4,6,1,2])
     print(Solution().inorderTraversal(root))
