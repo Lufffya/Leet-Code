@@ -1,5 +1,6 @@
 # https://leetcode.cn/problems/combinations/
 
+import copy
 from typing import List
 
 
@@ -9,7 +10,7 @@ class Solution:
         def backtrack(start_index):
             
             if len(path) == k:
-                res.append(path)
+                res.append(path[:])
                 return
             
             for i in range(start_index, n+1):
@@ -21,7 +22,6 @@ class Solution:
         res = []
         backtrack(1)
         return res
-
 
 
 if __name__ == "__main__":
