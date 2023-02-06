@@ -16,5 +16,6 @@ class Solution:
         return root
 
 if __name__ == "__main__":
-    root = list_to_tree([4,2,7,1,3,6,9])
+    root = [4,2,7,1,3,6,9]
+    root = list_to_tree(root)
     print(Solution().invertTree(root))

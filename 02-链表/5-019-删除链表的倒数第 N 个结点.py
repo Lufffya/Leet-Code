@@ -32,4 +32,3 @@ if __name__ == "__main__":
     n = 2
     r = Solution().removeNthFromEnd(head, n)
     print(r)
-    

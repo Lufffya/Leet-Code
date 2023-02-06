@@ -42,5 +42,6 @@ class Solution:
 
 
 if __name__ == "__main__":
-    root = list_to_tree([3,1,2])
+    root = [3,1,2]
+    root = list_to_tree(root)
     print(Solution().postorderTraversal(root))

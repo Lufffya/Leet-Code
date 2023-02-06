@@ -30,5 +30,6 @@ class Solution:
     
 
 if __name__ == "__main__":
-    root = list_to_tree([3,4,7,1,3,5,8])
+    root = [3,4,7,1,3,5,8]
+    root = list_to_tree(root)
     print(Solution().levelOrder(root))

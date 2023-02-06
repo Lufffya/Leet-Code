@@ -44,5 +44,6 @@ class Solution:
 
 
 if __name__ == "__main__":
-    root = list_to_tree([5,4,6,1,2])
+    root = [5,4,6,1,2]
+    root = list_to_tree(root)
     print(Solution().inorderTraversal(root))

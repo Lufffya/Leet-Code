@@ -54,4 +54,3 @@ if __name__ == "__main__":
     head = n1
     r = Solution().detectCycle(head)
     print(r.val)
-    

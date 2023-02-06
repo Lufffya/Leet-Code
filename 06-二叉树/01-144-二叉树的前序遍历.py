@@ -1,8 +1,5 @@
 # https://leetcode.cn/problems/binary-tree-preorder-traversal/
 
-
-# https://leetcode.cn/problems/binary-tree-preorder-traversal/
-
 from typing import List, Optional
 from helper import TreeNode, list_to_tree
 
@@ -45,5 +42,6 @@ class Solution:
 
 
 if __name__ == "__main__":
-    root = list_to_tree([1,None,2,3])
+    root = [1,None,2,3]
+    root = list_to_tree(root)
     print(Solution().preorderTraversal(root))
