@@ -1,18 +1,19 @@
-# https://leetcode.cn/problems/combinations/
+# https://leetcode.cn/problems/combination-sum-iii/
 
 from typing import List
 
 
 class Solution:
-    def combine(self, n: int, k: int) -> List[List[int]]:
+    def combinationSum3(self, k: int, n: int) -> List[List[int]]:
         
         def backtrack(start_index):
             
             if len(path) == k:
-                res.append(path[:])
+                if sum(path) == n:
+                    res.append(path[:])
                 return
             
-            for i in range(start_index, n+1):
+            for i in range(start_index, 10-(k-len(path))+1):
                 path.append(i)
                 backtrack(i+1)
                 path.pop()
@@ -24,6 +25,6 @@ class Solution:
 
 
 if __name__ == "__main__":
-    n = 4
-    k = 2
-    print(Solution().combine(n, k))
+    k = 9
+    n = 45
+    print(Solution().combinationSum3(k, n))
