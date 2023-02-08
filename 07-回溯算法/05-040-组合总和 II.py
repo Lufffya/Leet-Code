@@ -6,8 +6,6 @@ from typing import List
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
         
-        # duplicate removal
-        # candidates = sorted(list(set(candidates)))
         candidates.sort()
 
         def backtrack(start_index, _sum):
