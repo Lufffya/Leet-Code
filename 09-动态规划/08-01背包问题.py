@@ -1,18 +1,5 @@
-def test_1_wei_bag_problem(bag_weight, weight, value):
-    # 初始化: 全为0
-    dp = [0] * (bag_weight + 1)
-
-    # 先遍历物品, 再遍历背包容量
-    for i in range(len(weight)):
-        for j in range(bag_weight, weight[i] - 1, -1):
-            # 递归公式
-            dp[j] = max(dp[j], dp[j - weight[i]] + value[i])
-
-    print(dp)
-
-
-def test_2_wei_bag_problem1(bag_weight, weight, value) -> int: 
-	rows, cols = len(weight), bag_weight + 1
+def test_2_wei_bag_problem1(bag_size, weight, value) -> int: 
+	rows, cols = len(weight), bag_size + 1
 	dp = [[0 for _ in range(cols)] for _ in range(rows)]
     
 	# 初始化dp数组. 
@@ -33,11 +20,28 @@ def test_2_wei_bag_problem1(bag_weight, weight, value) -> int:
 				# 定义dp数组: dp[i][j] 前i个物品里，放进容量为j的背包，价值总和最大是多少。
 				dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - cur_weight]+ cur_val)
 
+	# print two demension array
+	for i in range(len(dp)):
+		print(dp[i])
+	return dp[-1][-1]
+
+
+def test_2_wei_bag_problem2(bag_size, weight, value) -> int:
+	dp = [0] * (bag_size+1)
+
+	for i in range(len(weight)):
+		for j in range(bag_size, 0, -1):
+			if weight[i] > j:
+				continue
+			dp[j] = max(dp[j], dp[j - weight[i]] + value[i])
+
 	print(dp)
+	return dp[-1]
 
 
-if __name__ == "__main__": 
-    bag_weight = 4
-    weight = [1, 3, 4]
-    value = [15, 20, 30]
-    test_1_wei_bag_problem(bag_weight, weight, value)
+if __name__ == "__main__":
+	bag_size = 4
+	weight = [1, 3, 4]
+	value = [15, 20, 30]
+	print(test_2_wei_bag_problem1(bag_size, weight, value))
+	print(test_2_wei_bag_problem2(bag_size, weight, value))
