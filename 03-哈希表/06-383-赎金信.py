@@ -19,6 +19,7 @@ class Solution:
 
         return True
 
+
 if __name__ == "__main__":
     ransomNote = "aa"
     magazine = "ab"

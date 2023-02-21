@@ -6,7 +6,7 @@ class Solution:
         def get_sum(n):
             _sum = 0
             while n:
-                _sum += (n % 10)**2
+                _sum += (n % 10) ** 2
                 n = n // 10
             return _sum
         

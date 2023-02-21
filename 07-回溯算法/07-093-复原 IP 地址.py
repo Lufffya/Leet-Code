@@ -14,7 +14,7 @@ class Solution:
                 return
 
             for i in range(start_index, len(s)):
-                p_s = s[start_index:i+1]
+                p_s = s[start_index:i + 1]
                 
                 if p_s[0] == '0' and len(p_s) > 1:
                     break
@@ -22,7 +22,7 @@ class Solution:
                     break
 
                 path.append(p_s)
-                backtrack(i+1)
+                backtrack(i + 1)
                 path.pop()
 
         path = []

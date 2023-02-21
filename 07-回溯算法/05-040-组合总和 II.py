@@ -20,12 +20,12 @@ class Solution:
                 if _sum + candidates[i] > target:
                     continue
 
-                if i > start_index and candidates[i] == candidates[i-1]:
+                if i > start_index and candidates[i] == candidates[i - 1]:
                     continue
 
                 path.append(candidates[i])
                 _sum += candidates[i]
-                backtrack(i+1, _sum)
+                backtrack(i + 1, _sum)
                 _sum -= candidates[i]
                 path.pop()
 

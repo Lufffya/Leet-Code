@@ -17,11 +17,11 @@ class Solution:
 
             for i in range(start_index, len(nums)):
 
-                if i > start_index and nums[i] == nums[i-1]:
+                if i > start_index and nums[i] == nums[i - 1]:
                     continue
 
                 path.append(nums[i])
-                backtrack(i+1)
+                backtrack(i + 1)
                 path.pop()
 
         path = []

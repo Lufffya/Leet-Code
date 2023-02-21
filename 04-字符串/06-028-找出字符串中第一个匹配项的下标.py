@@ -7,9 +7,9 @@ class Solution:
 
         pre_fix = [0] * m
         for i in range(1, m):
-            j = pre_fix[i-1]
+            j = pre_fix[i - 1]
             while j > 0 and needle[i] != needle[j]:
-                j = pre_fix[j-1]
+                j = pre_fix[j - 1]
             if needle[i] == needle[j]:
                 j += 1
             pre_fix[i] = j
@@ -17,7 +17,7 @@ class Solution:
         j = 0
         for i in range(n):
             while j > 0 and haystack[i] != needle[j]:
-                j = pre_fix[j-1]
+                j = pre_fix[j - 1]
             if haystack[i] == needle[j]:
                 j += 1
             if j == m:

@@ -29,6 +29,7 @@ class Solution:
         backtracking("JFK")
         return path
 
+
 if __name__ == "__main__":
     tickets = [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
     print(Solution().findItinerary(tickets))

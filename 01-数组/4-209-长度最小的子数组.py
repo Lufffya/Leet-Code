@@ -11,7 +11,7 @@ class Solution:
         for j in range(len(nums)):
             sums += nums[j]
             while sums >= target:
-                min_len = min(min_len, (j+1)-i)
+                min_len = min(min_len, (j + 1) - i)
                 sums -= nums[i]
                 i += 1
         return 0 if min_len == float('inf') else min_len

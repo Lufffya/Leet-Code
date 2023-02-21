@@ -12,9 +12,9 @@ class Solution:
         res = 1
         pre_diff = 0
 
-        for i in range(len(nums)-1):
+        for i in range(len(nums) - 1):
             
-            diff = nums[i+1] - nums[i]
+            diff = nums[i + 1] - nums[i]
             
             if diff * pre_diff <= 0 and diff != 0:
                 res += 1

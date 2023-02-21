@@ -26,7 +26,7 @@ class Solution:
 
                 usage.add(nums[i])
                 path.append(nums[i])
-                backtrack(i+1)
+                backtrack(i + 1)
                 path.pop()
 
         path = []

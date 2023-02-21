@@ -13,9 +13,9 @@ class Solution:
                     res.append(path[:])
                 return
             
-            for i in range(start_index, 10-(k-len(path))+1):
+            for i in range(start_index, 10 - (k - len(path)) + 1):
                 path.append(i)
-                backtrack(i+1)
+                backtrack(i + 1)
                 path.pop()
 
         path = []

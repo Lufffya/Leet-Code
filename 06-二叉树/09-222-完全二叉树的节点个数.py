@@ -15,12 +15,12 @@ class Solution:
 
         root_left = root.left
         while root_left:
-            left_depth +=1
+            left_depth += 1
             root_left = root_left.left
 
         root_right = root.right
         while root_right:
-            right_depth +=1
+            right_depth += 1
             root_right = root_right.right
         
         if left_depth == right_depth:

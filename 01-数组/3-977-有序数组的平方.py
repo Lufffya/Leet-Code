@@ -12,12 +12,12 @@ class Solution:
 
         while left <= right:
 
-            if nums[left] **2 > nums[right] **2:
-                new_nums[max_index] = nums[left] **2
+            if nums[left] ** 2 > nums[right] ** 2:
+                new_nums[max_index] = nums[left] ** 2
                 max_index -= 1
                 left += 1
             else:
-                new_nums[max_index] = nums[right] **2
+                new_nums[max_index] = nums[right] ** 2
                 max_index -= 1
                 right -= 1
         

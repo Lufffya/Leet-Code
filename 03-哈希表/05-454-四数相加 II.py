@@ -16,8 +16,8 @@ class Solution:
         res = 0
         for n3 in nums3:
             for n4 in nums4:
-                if -(n3 + n4) in val_dict:
-                    res += val_dict[-(n3 + n4)]
+                if - (n3 + n4) in val_dict:
+                    res += val_dict[- (n3 + n4)]
 
         return res
 

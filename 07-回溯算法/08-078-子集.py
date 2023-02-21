@@ -15,7 +15,7 @@ class Solution:
 
             for i in range(start_index, len(nums)):
                 path.append(nums[i])
-                backtrack(i+1)
+                backtrack(i + 1)
                 path.pop()
 
         path = []

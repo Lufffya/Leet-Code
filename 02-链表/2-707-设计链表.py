@@ -56,9 +56,9 @@ class MyLinkedList:
             count = 0
             cur = self.node
             while cur.next is not None:
-                if count == index-1:
+                if count == index - 1:
                     cur.next = Node(val, cur.next)
-                    self.node_len +=1
+                    self.node_len += 1
                     break
                 cur = cur.next
                 count += 1
@@ -69,14 +69,14 @@ class MyLinkedList:
             return
         if index == 0:
             self.node = self.node.next
-            self.node_len -=1
+            self.node_len -= 1
             return
-        if index == self.node_len-1:
+        if index == self.node_len - 1:
             cur = self.node
             while cur.next is not None:
                 if cur.next.next is None:
                     cur.next = None
-                    self.node_len -=1
+                    self.node_len -= 1
                     break
                 cur = cur.next
             return
@@ -84,9 +84,9 @@ class MyLinkedList:
         count = 0
         cur = self.node
         while cur is not None:
-            if count == index-1:
+            if count == index - 1:
                 cur.next = cur.next.next
-                self.node_len -=1
+                self.node_len -= 1
                 break
             cur = cur.next
             count += 1

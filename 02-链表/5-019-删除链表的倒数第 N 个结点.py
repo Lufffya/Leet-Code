@@ -17,7 +17,7 @@ class Solution:
         slow = head
         i = 0
         while fast:
-            if i >= n+1:
+            if i >= n + 1:
                 slow = slow.next
             fast = fast.next
             i += 1

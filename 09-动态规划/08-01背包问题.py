@@ -18,7 +18,7 @@ def test_2_wei_bag_problem1(bag_size, weight, value) -> int:
 				dp[i][j] = dp[i - 1][j] # 所以不装当前物品. 
 			else: 
 				# 定义dp数组: dp[i][j] 前i个物品里，放进容量为j的背包，价值总和最大是多少。
-				dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - cur_weight]+ cur_val)
+				dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - cur_weight] + cur_val)
 
 	# print two demension array
 	for i in range(len(dp)):
@@ -27,7 +27,7 @@ def test_2_wei_bag_problem1(bag_size, weight, value) -> int:
 
 
 def test_2_wei_bag_problem2(bag_size, weight, value) -> int:
-	dp = [0] * (bag_size+1)
+	dp = [0] * (bag_size + 1)
 
 	for i in range(len(weight)):
 		for j in range(bag_size, 0, -1):
