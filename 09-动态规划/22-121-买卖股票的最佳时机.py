@@ -11,8 +11,8 @@ class Solution:
         dp[0][1] = 0
 
         for i in range(1, len(prices)):
-            dp[i][0] = max(dp[i-1][0], -prices[i])
-            dp[i][1] = max(dp[i-1][1], dp[i-1][0] + prices[i])
+            dp[i][0] = max(dp[i - 1][0], -prices[i])
+            dp[i][1] = max(dp[i - 1][1], dp[i - 1][0] + prices[i])
 
         return max(dp[-1])
 
@@ -24,7 +24,7 @@ class Solution:
         min_price = prices[0]
         for i in range(1, len(prices)):
             min_price = min(min_price, prices[i])
-            dp[i] = max(dp[i-1], prices[i] - min_price)
+            dp[i] = max(dp[i - 1], prices[i] - min_price)
 
         return dp[-1]
 
